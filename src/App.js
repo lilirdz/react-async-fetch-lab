@@ -18,7 +18,7 @@ export default class App extends React.Component {
     return (
       <div>
         {this.state.astronauts.map((person) => (
-          <l1>{person.name}</l1>
+          <li>{person.name}</li>
         ))}
       </div>
     );
