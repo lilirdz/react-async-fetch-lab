@@ -6,6 +6,7 @@ import { spy, stub, useFakeTimers } from 'sinon'
 const fetchMock = require('fetch-mock')
 import Adapter from 'enzyme-adapter-react-16';
 import "@babel/polyfill";
+
 configure({ adapter: new Adapter() });
 
 import App from '../src/App';
@@ -18,7 +19,7 @@ describe('<App />', () => {
 
   before(() => {
     global.fetch = require('node-fetch')
-    fetchMock.get('*', {people: [{name:"Stimpy"}]})
+    fetchMock.get('*', { people: [{ name: "Stimpy" }] })
     fetchSpy = spy(global, "fetch")
 
   })
